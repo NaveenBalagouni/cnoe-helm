@@ -1,0 +1,23 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: "{{ .Values.appName }}"
+  namespace: "{{ .Values.argocdNamespace }}"
+spec:
+  destination:
+    namespace: "{{ .Values.appNamespace }}"
+    server: "{{ .Values.k8sServer }}"
+  source:
+    repoURL: "{{ .Values.repoURL }}"
+    path: "{{ .Values.repoPath }}"
+    targetRevision: "{{ .Values.targetRevision }}"
+    helm:
+      valueFiles:
+        - "{{ .Values.helmValueFile }}"
+  project: "{{ .Values.project }}"
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
