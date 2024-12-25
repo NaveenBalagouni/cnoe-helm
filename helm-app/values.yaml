@@ -1,9 +1,4 @@
-appName: single-helm
-argocdNamespace: argocd
-appNamespace: single-helm
-k8sServer: 'https://kubernetes.default.svc'
+namespace: single-helm
 repoURL: 'https://github.com/NaveenBalagouni/cnoe-helm.git'
-repoPath: helm-cnoe
+chartPath: helm-app/charts
 targetRevision: main
-helmValueFile: values.yaml
-project: default

@@ -1,20 +1,20 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: "{{ .Values.appName }}"
-  namespace: "{{ .Values.argocdNamespace }}"
+  name: {{ .Release.Name }}-cnoe
+  namespace: argocd
 spec:
   destination:
-    namespace: "{{ .Values.appNamespace }}"
-    server: "{{ .Values.k8sServer }}"
+    namespace: {{ .Values.namespace }}
+    server: 'https://kubernetes.default.svc'
   source:
-    repoURL: "{{ .Values.repoURL }}"
-    path: "{{ .Values.repoPath }}"
-    targetRevision: "{{ .Values.targetRevision }}"
+    repoURL: '{{ .Values.repoURL }}'
+    path: '{{ .Values.chartPath }}'
+    targetRevision: '{{ .Values.targetRevision }}'
     helm:
       valueFiles:
-        - "{{ .Values.helmValueFile }}"
-  project: "{{ .Values.project }}"
+        - values.yaml
+  project: default
   syncPolicy:
     automated:
       prune: true
