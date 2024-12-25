@@ -3,7 +3,7 @@ entries:
   helm-cnoe:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2024-12-26T02:43:13.342575+05:30"
+    created: "2024-12-26T02:45:45.5718475+05:30"
     description: A Helm chart for Kubernetes
     digest: b4497bc1493540bd9ed4890f214ecab33dabb5c5ed4542db666f1b194b1ed0e1
     name: helm-cnoe
@@ -11,4 +11,4 @@ entries:
     urls:
     - https://NaveenBalagouni.github.io/cnoe-helm/helm-cnoe-0.1.0.tgz
     version: 0.1.0
-generated: "2024-12-26T02:43:13.3351173+05:30"
+generated: "2024-12-26T02:45:45.5707664+05:30"
