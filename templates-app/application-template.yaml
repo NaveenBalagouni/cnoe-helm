@@ -8,9 +8,9 @@ spec:
     namespace: {{ .Values.namespace }}
     server: 'https://kubernetes.default.svc'
   source:
-    repoURL: '{{ .Values.repoURL }}'
-    path: '{{ .Values.chartPath }}'
-    targetRevision: '{{ .Values.targetRevision }}'
+    repoURL: {{ .Values.repoURL }}
+    path: {{ .Values.chartPath }}
+    targetRevision: {{ .Values.targetRevision }}
     helm:
       valueFiles:
         - values.yaml
