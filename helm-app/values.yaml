@@ -1,4 +1,4 @@
-appName: single-helm-app-non-prod
+appName: single-helm
 argocdNamespace: argocd
 appNamespace: single-helm
 k8sServer: 'https://kubernetes.default.svc'
