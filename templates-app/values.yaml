@@ -1,4 +1,0 @@
-namespace: single-helm
-repoURL: 'https://github.com/NaveenBalagouni/cnoe-helm.git'
-chartPath: helm-app/charts
-targetRevision: main

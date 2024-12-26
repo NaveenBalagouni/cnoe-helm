@@ -1,8 +1,0 @@
-replicaCount: 1  # Number of replicas
-
-image:
-  repository: nginx  # Docker image repository
-  tag: latest        # Image tag (you can specify the version)
-  pullPolicy: IfNotPresent  # Image pull policy
-
-# Optionally, you can add more values to customize other parts of the deployment
